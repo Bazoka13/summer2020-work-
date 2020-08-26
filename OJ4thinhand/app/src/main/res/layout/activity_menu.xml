@@ -99,7 +99,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/index_bottom_divider"
-            android:layout_below="@id/index_title_divider" />
+            android:layout_below="@id/index_title_divider"/>
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
