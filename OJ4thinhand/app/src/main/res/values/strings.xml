@@ -23,4 +23,7 @@
     <string name="community">Community</string>
     <string name="tutorial">Tutorial</string>
     <string name="problems">Problems</string>
+    <string name="problemset">
+        10001
+    </string>
 </resources>

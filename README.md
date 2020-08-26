@@ -22,3 +22,11 @@ In this part,I wanna achieve the following things:
 - Browse users' favorite problems
 - Check the notifications
 - Log out
+
+
+### About work (updating)
+- finish simple UI in menu and login
+- plan to add four activity into MenuActivity
+- have written simple ScrollView in Problemset
+
+It seems that i'm gonna make something harder than what i expected.
