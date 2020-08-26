@@ -9,35 +9,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AccountActivity"
-                  android:parentActivityName=".MainActivity">
+        <activity android:name=".MenuActivity"></activity>
+        <activity
+            android:name=".AccountActivity"
+            android:parentActivityName=".MenuActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".MenuActivity" />
         </activity>
-        <activity android:name=".LoginActivity"
-            android:parentActivityName=".MainActivity">
+        <activity
+            android:name=".CommunityActivity"
+            android:parentActivityName=".MenuActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".MenuActivity" />
         </activity>
-        <activity android:name=".CommunityActivity"
-            android:parentActivityName=".MainActivity">
+        <activity
+            android:name=".TutorialActivity"
+            android:parentActivityName=".MenuActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".MenuActivity" />
         </activity>
-        <activity android:name=".TutorialActivity"
-            android:parentActivityName=".MainActivity">
+        <activity
+            android:name=".ProblemActivity"
+            android:parentActivityName=".MenuActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity android:name=".ProblemActivity"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".MenuActivity" />
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -3,9 +3,24 @@
     <string name="name">Name</string>
     <string name="welcome">Welcome to OJ4th in hand!</string>
     <string name="edit_message">Enter a message</string>
-    <string name="button_send">Log in</string>
+    <string name="person_name">Enter your ID</string>
+    <string name="person_password">Enter your password</string>
+    <string name="button_login">Log in</string>
     <string name="button_problemset">Problem</string>
     <string name="button_tutorials">Tutorial</string>
     <string name="button_account">Account</string>
     <string name="button_community">Community</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title">Title</string>
+    <string name="account">Account</string>
+    <string name="community">Community</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="problems">Problems</string>
 </resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MenuActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/index_title_tb"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimaryDark"
+            toolbar:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            toolbar:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <TextView
+                android:id="@+id/index_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/title"
+                android:textColor="#ffffff" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <View
+            android:id="@+id/index_title_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/index_title_tb" />
+
+        <RadioGroup
+            android:id="@+id/index_bottom_navigation_rg"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/index_tab_a_rb"
+
+                style="@android:style/Widget.CompoundButton.RadioButton"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="watchProblem"
+                android:text="@string/problems"
+                android:textAlignment="center"
+                android:visibility="visible" />
+
+            <RadioButton
+                android:id="@+id/index_tab_b_rb"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="watchTutorial"
+                android:text="@string/tutorial"
+                android:textAlignment="center" />
+
+            <RadioButton
+                android:id="@+id/index_tab_c_rb"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="watchCommunity"
+                android:text="@string/community"
+                android:textAlignment="center"
+                android:visibility="visible" />
+
+
+            <RadioButton
+                android:id="@+id/index_tab_d_rb"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="watchAccount"
+                android:text="@string/account"
+                android:textAlignment="center"
+                android:visibility="visible" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/index_bottom_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/index_bottom_navigation_rg" />
+
+        <FrameLayout
+            android:id="@+id/index_content_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/index_bottom_divider"
+            android:layout_below="@id/index_title_divider" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

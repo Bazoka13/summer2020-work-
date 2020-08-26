@@ -6,4 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".AccountActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/index_title_tb"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimaryDark"
+            toolbar:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            toolbar:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <TextView
+                android:id="@+id/index_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/account"
+                android:textColor="#ffffff" />
+        </androidx.appcompat.widget.Toolbar>
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
