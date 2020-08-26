@@ -6,13 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="300dp"
+        android:onClick="watchProblem"
+        android:text="@string/button_problemset"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="watchAccount"
+        android:text="@string/button_account"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="200dp"
+        android:onClick="watchCommunity"
+        android:text="@string/button_community"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="60dp"
+        android:onClick="watchTutorial"
+        android:text="@string/button_tutorials"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="225dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="93dp"
+        android:text="@string/welcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

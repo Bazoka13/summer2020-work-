@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">OJ4th in hand</string>
+    <string name="name">Name</string>
+    <string name="welcome">Welcome to OJ4th in hand!</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Log in</string>
+    <string name="button_problemset">Problem</string>
+    <string name="button_tutorials">Tutorial</string>
+    <string name="button_account">Account</string>
+    <string name="button_community">Community</string>
 </resources>
