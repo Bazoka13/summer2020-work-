@@ -13,20 +13,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.Toolbar xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/index_title_tb"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@color/colorPrimaryDark"
-            toolbar:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            toolbar:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <TextView
                 android:id="@+id/index_title_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/title"
+                android:text="@string/menu"
                 android:textColor="#ffffff" />
         </androidx.appcompat.widget.Toolbar>
 
