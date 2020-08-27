@@ -1,10 +1,15 @@
 package com.example.oj4thinhand
 
+import android.app.Activity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +33,19 @@ class ProblemFragment : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+    fun initAdapter(){
+        val problems= arrayOf("1001", "1002", "1003")
+        val problemAdapter= this.activity?.let { ArrayAdapter(
+            it,
+            R.layout.fragment_problem,
+            problems
+        ) }
+        val problemFind= view?.findViewById<AutoCompleteTextView>(R.id.problemSearch)
+        if (problemFind != null) {
+            problemFind.setAdapter(problemAdapter)
 
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

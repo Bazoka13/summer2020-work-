@@ -7,11 +7,22 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-
+    <!-- <SearchView
+        android:id="@+id/problemSearch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:queryHint="ID/Name"
+        android:iconifiedByDefault="true" />
+    -->
+<AutoCompleteTextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/problemSearch"
+    />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
+        android:layout_marginTop="48dp"
         android:layout_marginBottom="30dp">
 
         <LinearLayout
@@ -19,7 +30,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

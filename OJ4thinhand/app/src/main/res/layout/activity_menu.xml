@@ -30,7 +30,6 @@
                 android:textColor="#ffffff" />
         </androidx.appcompat.widget.Toolbar>
 
-
         <View
             android:id="@+id/index_title_divider"
             android:layout_width="match_parent"
