@@ -9,26 +9,27 @@ import android.widget.*
 
 class TutorialActivity : AppCompatActivity() {
     private val strings = arrayOf(
-        "1001",
-        "1002",
-        "1003",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7",
-        "8",
-        "9",
-        "10",
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17"
+        "0 a+b demo示例   ",
+        "1 test a+b   ",
+        "2 求余   ",
+        "3 BlueFly发糖了   ",
+        "4 Kevin·Feng的正确@姿势   ",
+        "5  jhljx上小学   ",
+        "6 三位数反转   ",
+        "7 Last_Day's dog   ",
+        "8 creeper学妹的计算题   ",
+        "9 零崎的人间冒险Ⅰ   ",
+        "10 零崎的人间冒险Ⅱ   ",
+        "11 Let's play a game    ",
+        "12 零崎的人间冒险Ⅲ   ",
+        "14 Inverse number：Reborn   ",
+        "15 零崎的人间冒险Ⅳ   ",
+        "17 A+B   ",
+        "18 快来快来帮猪脚   ",
+        "19 大家快来刷TD啊   ",
+        "20 水水哒a+b   ",
+        "21 大家都来分级啦   ",
+        "22 公公偏头痛   "
     )
     private fun toTutorialDetail(ID: Int){
         val intent= Intent(this,TutorialActivity::class.java).apply {  }
@@ -38,7 +39,7 @@ class TutorialActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tutorial)
         val listView: ListView = findViewById(R.id.tutorialListview)
-        listView.adapter = ArrayAdapter<Any?>(this, android.R.layout.simple_list_item_1, strings)
+        listView.adapter = ArrayAdapter<Any?>(this,R.layout.listview_style_1, strings)
         listView.isTextFilterEnabled = true
         listView.onItemClickListener =
             AdapterView.OnItemClickListener { parent: AdapterView<*>?, view: View, position: Int, id: Long ->

@@ -35,4 +35,6 @@
     <string name="_1_test_a_b">1      test     a+b</string>
     <string name="Home">首页</string>
     <string name="oj4th_in_hand">OJ4th in hand</string>
+    <string name="addTreasure">加入收藏</string>
+    <string name="watchTutorial">查看题解</string>
 </resources>

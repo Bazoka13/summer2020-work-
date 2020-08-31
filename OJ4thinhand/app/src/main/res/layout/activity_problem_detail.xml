@@ -6,4 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".ProblemDetailActivity">
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/index_title_tb"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#3232CD"
+
+            toolbar:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            toolbar:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <TextView
+                android:id="@+id/problemTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="casual"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="30sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49dp"
+            android:background="#22000000" />
+
+        <TextView
+            android:id="@+id/detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp" />
+
+
+    </RelativeLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
