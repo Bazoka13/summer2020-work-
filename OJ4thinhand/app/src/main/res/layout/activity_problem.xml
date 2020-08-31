@@ -7,6 +7,7 @@
     tools:context=".ProblemActivity">
 
     <RelativeLayout
+        android:id="@+id/problemFace"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -14,7 +15,8 @@
             android:id="@+id/index_title_tb"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@color/colorPrimaryDark"
+            android:background="#3232CD"
+
             toolbar:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             toolbar:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
@@ -22,30 +24,45 @@
                 android:id="@+id/index_title_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#ffffff"
                 android:layout_gravity="center"
-                android:text="@string/problems"
-                android:textColor="#ffffff" />
+                android:text="@string/button_problemset"
+                android:fontFamily="casual"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:gravity="center"
+                />
         </androidx.appcompat.widget.Toolbar>
-
-        <ScrollView
-            android:id="@+id/ScrollView"
+        <View
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="1dp"
+            android:layout_marginTop="49dp"
+            android:background="#22000000"/>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="48dp"
-            >
+            android:orientation="vertical">
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="casual"
+            android:id="@+id/problemSearch"
+            android:textAlignment="center"
+            android:iconifiedByDefault="true"
+            android:queryHint="ID/Name"
+            android:layout_marginTop="55dp"
 
-            <LinearLayout
-                android:id="@+id/problemsetView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+            />
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:fontFamily="casual"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/problemset" />
-            </LinearLayout>
-        </ScrollView>
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

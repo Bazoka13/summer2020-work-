@@ -26,6 +26,31 @@
                 android:text="@string/community"
                 android:textColor="#ffffff" />
         </androidx.appcompat.widget.Toolbar>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="60dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/testCommunity"
+                    android:textAlignment="center"
+                    android:onClick="watchDetail"
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:iconifiedByDefault="true"
+            android:queryHint="@string/name"
+            />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

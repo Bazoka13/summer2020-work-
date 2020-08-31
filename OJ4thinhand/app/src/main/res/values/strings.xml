@@ -20,13 +20,19 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title">Title</string>
-    <string name="account">Account</string>
-    <string name="community">Community</string>
-    <string name="tutorial">Tutorial</string>
-    <string name="problems">Problems</string>
+    <string name="account">· Account</string>
+    <string name="community">· Community</string>
+    <string name="tutorial">· Tutorial</string>
+    <string name="problems">· Problems</string>
+    <string name="testCommunity">test</string>
     <string name="problemset">pppppppppppppp
     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="id_name">ID/Name</string>
+    <string name="test">test</string>
+    <string name="home">Home</string>
+    <string name="_1_test_a_b">1      test     a+b</string>
+    <string name="Home">首页</string>
+    <string name="oj4th_in_hand">OJ4th in hand</string>
 </resources>

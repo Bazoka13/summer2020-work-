@@ -2,13 +2,10 @@ package com.example.oj4thinhand
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 
-class CommunityActivity : AppCompatActivity() {
+class ProblemDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_community)
+        setContentView(R.layout.activity_problem_detail)
     }
-
-    fun watchDetail(view: View) {}
 }

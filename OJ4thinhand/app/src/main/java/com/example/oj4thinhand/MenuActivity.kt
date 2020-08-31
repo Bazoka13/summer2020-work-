@@ -15,45 +15,30 @@ class MenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
         initView()
     }
-
     private fun initView() {
-        val one = ProblemFragment()
-        if(one.activity!=null){
-            val two = TutorialFragment()
-            supportFragmentManager.beginTransaction().replace(R.id.index_content_fl,two).commit()
-        } else supportFragmentManager.beginTransaction().replace(R.id.index_content_fl,one).commit()
+
     }
     //Called when user click on the Problem button
     fun watchProblem(view: View){
-        val one = ProblemFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.index_content_fl,one).commit()
+        val intent=Intent(this,ProblemActivity::class.java).apply {  }
+        startActivity(intent);
+    }
+    public fun watchDetail(view: View){
 
-        val problems= arrayOf("1001","1002","1003")
-        if(one.activity!=null){
-            val two = TutorialFragment()
-            supportFragmentManager.beginTransaction().replace(R.id.index_content_fl,two).commit()
-        }
-        val problemAdapter= one.activity?.let { ArrayAdapter(it,R.layout.fragment_problem,problems) }
-        val problemFind= findViewById<AutoCompleteTextView>(R.id.problemSearch)
-
-        if (problemFind != null) {
-            problemFind.setAdapter(problemAdapter)
-
-        }
     }
     //Called when user click on the Tutorial button
     fun watchTutorial(view: View){
-        val one = TutorialFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.index_content_fl,one).commit()
+        val intent=Intent(this,TutorialActivity::class.java).apply {  }
+        startActivity(intent);
     }
     //Called when user click on the Community button
     fun watchCommunity(view: View){
-        val one = CommunityFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.index_content_fl,one).commit()
+        val intent=Intent(this,CommunityActivity::class.java).apply {  }
+        startActivity(intent);
     }
     //Called when user click on the Account button
     fun watchAccount(view: View){
-        val one = AccountFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.index_content_fl,one).commit()
+        val intent=Intent(this,AccountActivity::class.java).apply {  }
+        startActivity(intent);
     }
 }
