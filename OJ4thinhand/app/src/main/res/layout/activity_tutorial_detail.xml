@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProblemDetailActivity">
-
+    tools:context=".TutorialDetailActivity">
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
@@ -22,7 +21,7 @@
             toolbar:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
             <TextView
-                android:id="@+id/problemTitle"
+                android:id="@+id/tutorialTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -40,25 +39,12 @@
             android:layout_marginTop="49dp"
             android:background="#22000000" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/problemFloatingActionButton"
-            android:layout_width="66dp"
-            android:layout_height="108dp"
-            android:layout_marginStart="300dp"
-            android:layout_marginTop="500dp"
-            android:scrollbarSize="20dp"
-            android:clickable="true"
-            app:srcCompat="@drawable/floatbutton"
-            />
         <TextView
-            android:id="@+id/detail"
+            android:id="@+id/tutorialDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="55dp" />
 
 
     </RelativeLayout>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

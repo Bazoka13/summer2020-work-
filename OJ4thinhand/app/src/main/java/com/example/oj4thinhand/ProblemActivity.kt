@@ -14,7 +14,6 @@ import java.net.URL
 
 class ProblemActivity : AppCompatActivity() {
     private val strings = arrayOf(
-        "0 a+b demo示例   ",
         "1 test a+b   ",
         "2 求余   ",
         "3 BlueFly发糖了   ",

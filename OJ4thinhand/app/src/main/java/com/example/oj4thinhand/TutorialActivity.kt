@@ -9,7 +9,6 @@ import android.widget.*
 
 class TutorialActivity : AppCompatActivity() {
     private val strings = arrayOf(
-        "0 a+b demo示例   ",
         "1 test a+b   ",
         "2 求余   ",
         "3 BlueFly发糖了   ",
@@ -31,8 +30,10 @@ class TutorialActivity : AppCompatActivity() {
         "21 大家都来分级啦   ",
         "22 公公偏头痛   "
     )
-    private fun toTutorialDetail(ID: Int){
-        val intent= Intent(this,TutorialActivity::class.java).apply {  }
+    fun toTutorialDetail(ID: Int){
+        val intent=Intent(this,TutorialDetailActivity::class.java).apply {  }
+        intent.putExtra("id",ID)
+        intent.putExtra("name",strings[ID])
         startActivity(intent)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
