@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.oj4thinhand">
+    package="com.example.oj4thinhand" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".TutorialDetailActivity"></activity>
+        android:theme="@style/AppTheme" >
+        <activity android:name=".TopicActivity" >
+        </activity>
+        <activity android:name=".TreasureActivity" />
+        <activity
+            android:name=".TutorialDetailActivity"
+            android:parentActivityName=".TutorialActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".TutorialActivity" />
+        </activity>
         <activity
             android:name=".ProblemDetailActivity"
-            android:parentActivityName=".ProblemActivity">
+            android:parentActivityName=".ProblemActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ProblemActivity" />
@@ -22,33 +32,33 @@
         <activity android:name=".MenuActivity" />
         <activity
             android:name=".AccountActivity"
-            android:parentActivityName=".MenuActivity">
+            android:parentActivityName=".MenuActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MenuActivity" />
         </activity>
         <activity
             android:name=".CommunityActivity"
-            android:parentActivityName=".MenuActivity">
+            android:parentActivityName=".MenuActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MenuActivity" />
         </activity>
         <activity
             android:name=".TutorialActivity"
-            android:parentActivityName=".MenuActivity">
+            android:parentActivityName=".MenuActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MenuActivity" />
         </activity>
         <activity
             android:name=".ProblemActivity"
-            android:parentActivityName=".MenuActivity">
+            android:parentActivityName=".MenuActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MenuActivity" />
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

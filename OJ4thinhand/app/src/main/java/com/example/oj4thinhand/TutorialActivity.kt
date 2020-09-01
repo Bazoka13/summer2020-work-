@@ -36,6 +36,17 @@ class TutorialActivity : AppCompatActivity() {
         intent.putExtra("name",strings[ID])
         startActivity(intent)
     }
+    fun getInt(pos: Int): Int {
+        val listView: ListView = findViewById(R.id.tutorialListview)
+        var ans=0
+        var cnt=0
+        val s =listView.getItemAtPosition(pos) as String
+        for (i in strings){
+            if(i == s)ans=cnt
+            cnt++
+        }
+        return ans
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tutorial)
@@ -44,7 +55,7 @@ class TutorialActivity : AppCompatActivity() {
         listView.isTextFilterEnabled = true
         listView.onItemClickListener =
             AdapterView.OnItemClickListener { parent: AdapterView<*>?, view: View, position: Int, id: Long ->
-                toTutorialDetail(position)
+                toTutorialDetail(getInt(position))
             }
         val searchView: SearchView = findViewById(R.id.tutorialSearch)
         //为该SearchView组件设置事件监听器

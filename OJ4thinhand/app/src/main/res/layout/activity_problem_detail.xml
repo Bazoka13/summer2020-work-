@@ -39,22 +39,95 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="49dp"
             android:background="#22000000" />
+        <RelativeLayout
+            android:id="@+id/rlAddBill"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:id="@+id/ll05"
+                android:layout_marginTop="250dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:alpha="1.0"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/watchTutorial"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
 
+                    android:paddingBottom="5dp"
+                    tools:ignore="RtlHardcoded" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/miniFab05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:fabSize="mini"
+                    app:elevation="5dp"
+                    android:clickable="true"
+                    android:onClick="toTutorial"
+                    app:backgroundTint="#4169E1"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll06"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/ll05"
+                android:paddingTop="20dp"
+                android:alpha="1.0"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:paddingBottom="5dp"
+                    android:id="@+id/Treasure"
+                    tools:ignore="RtlHardcoded" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/miniFab06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:fabSize="mini"
+                    app:elevation="5dp"
+                    android:clickable="true"
+                    app:backgroundTint="#1E90FF"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/problemFloatingActionButton"
             android:layout_width="66dp"
             android:layout_height="108dp"
-            android:layout_marginStart="300dp"
+            android:layout_marginStart="320dp"
             android:layout_marginTop="500dp"
-            android:scrollbarSize="20dp"
+            app:fabSize="normal"
             android:clickable="true"
-            app:srcCompat="@drawable/floatbutton"
+            android:background="@drawable/floatbutton"
+            android:onClick="addMenu"
             />
+
         <TextView
             android:id="@+id/detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="55dp" />
+            android:layout_marginTop="55dp"
+            android:layout_below="@id/rlAddBill"/>
 
 
     </RelativeLayout>

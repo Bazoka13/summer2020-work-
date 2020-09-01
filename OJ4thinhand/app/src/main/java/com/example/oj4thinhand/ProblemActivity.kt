@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.*
 import android.widget.AdapterView.OnItemClickListener
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.get
 import org.json.JSONException
 import org.json.JSONObject
 import java.net.HttpURLConnection
@@ -36,10 +37,21 @@ class ProblemActivity : AppCompatActivity() {
         "22 公公偏头痛   "
     )
     fun toProblemDetail(ID: Int){
-        val intent=Intent(this,ProblemDetailActivity::class.java).apply {  }
-        intent.putExtra("id",ID)
-        intent.putExtra("name",strings[ID])
+        val intent=Intent(this, ProblemDetailActivity::class.java).apply {  }
+        intent.putExtra("id", ID)
+        intent.putExtra("name", strings[ID])
         startActivity(intent)
+    }
+    fun getInt(pos: Int): Int {
+        val listView: ListView = findViewById(R.id.listview)
+        var ans=0
+        var cnt=0
+        val s =listView.getItemAtPosition(pos) as String
+        for (i in strings){
+            if(i == s)ans=cnt
+            cnt++
+        }
+        return ans
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,13 +59,18 @@ class ProblemActivity : AppCompatActivity() {
         val listView: ListView = findViewById(R.id.listview)
         listView.adapter = ArrayAdapter<Any?>(this, R.layout.listview_style_1, strings)
         listView.isTextFilterEnabled = true
-        listView.onItemClickListener = OnItemClickListener { parent: AdapterView<*>?, view:View, position:Int, id:Long -> toProblemDetail(position) }
+        listView.onItemClickListener = OnItemClickListener { parent: AdapterView<*>?, view: View, position: Int, id: Long -> toProblemDetail(
+            getInt(
+                position
+            )
+        ) }
         val searchView: SearchView = findViewById(R.id.problemSearch)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
-                Toast.makeText(this@ProblemActivity, "你要搜索的是：$query", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this@ProblemActivity, "你要搜索的是：$query", Toast.LENGTH_SHORT)
                 return false
             }
+
             override fun onQueryTextChange(newText: String?): Boolean {
                 if (TextUtils.isEmpty(newText)) {
                     listView.clearTextFilter()
