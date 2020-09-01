@@ -25,8 +25,7 @@ In this part,I wanna achieve the following things:
 
 
 ### About work (updating)
-- finish simple UI in menu and login
-- plan to add four activity into MenuActivity
-- have written simple ScrollView in Problemset
+- try to add topic choose
+- construct community from zero
 
-It seems that i'm gonna make something harder than what i expected.
+It seems that i'm really nb.
